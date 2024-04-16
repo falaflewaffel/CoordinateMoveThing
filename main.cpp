@@ -4,9 +4,9 @@
 #include <array>
 #include <iostream>
 
-constexpr int gridSize{ 10 }; // grid is a square
+constexpr int gridSize{ 6 }; // grid is a square
 constexpr char playerIcon{ 'o' };
-constexpr char spaceIcon{ '_' };
+constexpr char spaceIcon{ '_' }; // probably could be better
 
 enum Direction
 {
@@ -52,7 +52,7 @@ public:
 class Game
 {
 private:
-    Point m_point{3, 3}; // 4th column, 4th row
+    Point m_point{0, 0}; // 4th column, 4th row
     std::array<bool, 4> m_wasPreviouslyPressed{}; // could use a bitset whatever but im too silly :3
     bool m_needsDrawn{ true };
     
